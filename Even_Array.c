@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,arr[100],even=0;
+    int i,n,arr[100],c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -11,15 +11,12 @@ int main()
     {
         if(arr[i]%2==0)
         {
-            even++;
+            c++;
         }
     }
-    if(even==n)
-    {
-        printf("True");
-    }
+    if(c==n)
+    printf("True");
     else
-    {
-        printf("False");
-    }
+    printf("False");
+    
 }
