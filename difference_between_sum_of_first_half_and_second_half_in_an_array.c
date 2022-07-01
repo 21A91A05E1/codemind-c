@@ -15,6 +15,6 @@ int main()
     {
         sum2=sum2+arr[i];
     }
-    diff=(sum2-sum1);
+    diff=sum2-sum1;
     printf("%d",diff);
 }
