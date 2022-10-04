@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int i,n,min=0,max=0,r1,r2;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        if(n>=pow(2,i))
+        {
+            min=i;
+        }
+        if(n<pow(2,i))
+        {
+            max=i;
+            break;
+        }
+    }
+    if(n-pow(2,min)<=pow(2,max)-n)
+    {
+        r1=n-pow(2,min);
+        printf("%d",r1);
+    }
+    else
+    {
+        r2=pow(2,max)-n;
+        printf("%d",r2);
+    }
+}
