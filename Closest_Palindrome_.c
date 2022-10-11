@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+    int n,d,i,j,temp,c=0,rev=0,bn,an,a,b;
+    scanf("%d",&n);
+    for(i=n-1;i>=0;i--)
+    {
+        c=0;
+        temp=i;
+        rev=0;
+        while(temp)
+        {
+            d=temp%10;
+            rev=rev*10+d;
+            temp=temp/10;
+        }
+        if(rev==i)
+        {
+            bn=i;
+            a=(n-bn);
+            break;
+        }
+    }
+    for(i=n+1;i<n+10000;i++)
+    {
+        c=0;
+        temp=i;
+        rev=0;
+        while(temp)
+        {
+            d=temp%10;
+            rev=rev*10+d;
+            temp=temp/10;
+        }
+        if(rev==i)
+        {
+            an=i;
+            b=an-n;
+            break;
+        }
+    }
+    if(a==b)
+    {
+        printf("%d %d",bn,an);
+    }
+    else if(a<b)
+    {
+        printf("%d",bn);
+    }
+    else
+    {
+        printf("%d",an);
+    }
+}
